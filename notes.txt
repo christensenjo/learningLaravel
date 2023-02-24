@@ -1,0 +1,93 @@
+Laravel Notes
+
+Use Sail for PHP and Composer!
+	vendor/bin/sail	
+
+Route Notes
+	# Test Routes
+// Route::get('/gone', function () {
+//     return response('<h1>Not Found</h1>', 404)
+//     ->header('foo', 'bar');
+// });
+
+// Route::get('/lists/{id}', function ($id) {
+//     // dd($id); Die-dump -- stop the method and return the value specified w/ 500 code
+//     ddd($id);
+//     return response('<h1>List ' .  $id . ' </h1>', 200);
+// })->where('id', '[0-9]+');
+
+// Route::get('/search', function(Request $request){
+//     return ($request->name . ' from ' . $request->city);
+// });
+
+# Available Route functions
+// Route::get($uri, $callback);
+// Route::post($uri, $callback);
+// Route::put($uri, $callback);
+// Route::patch($uri, $callback);
+// Route::delete($uri, $callback);
+// Route::options($uri, $callback);
+# multiple http methods per route
+// Route::match(['get', 'post'], '/', function () {
+//     // ...
+// });
+// Route::any('/', function () {
+//     // ...
+// });
+# Redirects
+// Route::redirect('/here', '/there', 301);
+# Parameters
+// Route::get('/user/{id}', function (string $id) {
+//     return 'User '.$id;
+// });
+# Named Routes
+// Route::get('/user/profile', function () {
+//     // ...
+// })->name('profile');
+# Controller Groups
+// use App\Http\Controllers\OrderController;
+ 
+// Route::controller(OrderController::class)->group(function () {
+//     Route::get('/orders/{id}', 'show');
+//     Route::post('/orders', 'store');
+// });
+# Prefixes
+// Route::prefix('admin')->group(function () {
+//     Route::get('/users', function () {
+//         // Matches The "/admin/users" URL
+//     });
+// });
+# Implicit Route Model Binding for database retrieval
+# https://laravel.com/docs/10.x/routing#implicit-binding
+// use App\Models\User;
+ 
+// Route::get('/users/{user}', function (User $user) {
+//     return $user->email;
+// });
+
+
+Model
+	DB Management Commands
+	---------------------
+	vendor/bin/sail artisan make:migration create_model_name
+
+	vendor/bin/sail artisan migrate
+
+	vendor/bin/sail artisan db:seed
+
+	vendor/bin/sail artisan migrate:refresh
+
+	vendor/bin/sail artisan migrate:refresh --seed
+
+	vendor/bin/sail artisan make:model Playlist
+
+
+View
+	routeName.blade.php
+
+Controller
+	
+
+
+#006d77, #83c5be, #edf6f9, #ffddd2, #e29578
+

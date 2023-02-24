@@ -1,0 +1,111 @@
+body {
+    background-color: #edf6f9;
+}
+
+a {
+    text-decoration: none;
+    color: #006d77;
+}
+
+.headerLogo {
+    height: 100px;
+    display: inline;
+}
+
+.title {
+    height: 100px;
+    line-height: 100px;
+    display: inline;
+    align-content: center;
+    padding-left: 40px;
+    text-align: left;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    padding-top: 100px;
+    display: inline;
+    align-content: center;
+    padding-left: 10px;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.authLinks {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    padding-right: 100px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.authLinks li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.card {
+    border-style: solid;
+    border-width: 5px 5px;
+    margin-bottom: 5px;
+    background-color: #ffddd2;
+}
+
+.playlistView {
+    background-color: #edf6f9;
+}
+
+.playlistIcon {
+    height: 80px;
+    width: auto;
+    float: left;
+    padding-right: 10px;
+}
+
+.shortDescription {
+    overflow: hidden;
+    display: block;
+    width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.createPlaylistForm {
+    display: block;
+}
+
+.createPlaylistForm label {
+    display: block;
+    margin: 10px;
+    padding: 6px;
+    padding-left: 10px;
+    font-size: 30px;
+}
+
+.createPlaylistForm input {
+    margin: 10px;
+    width: 30%;
+    padding: 6px;
+    padding-left: 10px;
+}
+
+#description {
+    width: 80%;
+    height: 100px;
+    margin: 10px;
+    padding: 6px;
+    padding-left: 10px;
+    resize: both;
+    overflow: auto;
+}
+
+.createPlaylistForm button {
+    margin-left: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}

@@ -17,3 +17,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+# JSON Endpoint Example
+// Route::get('/lists', function(){
+//     return response()->json([
+//         'lists' => [
+//             [
+//                 'title' => 'List One'
+//             ]
+//         ]
+//     ]);
+// });
