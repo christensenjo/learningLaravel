@@ -11,7 +11,7 @@ class PlaylistController extends Controller
     // Get and show all playlists
     public function index(){
         return view('playlists.index', [
-            'playlists' => Playlist::all()
+            'playlists' => Playlist::latest()->paginate(4)
         ]);
     }
 
@@ -29,11 +29,46 @@ class PlaylistController extends Controller
 
     // Show add playlist form
     public function store(Request $request){
-        // dd($request->all());
-
         $formFields = $request->validate([
             'name' => ['required', Rule::unique('playlists', 'name')],
             'description' => 'required'
         ]);
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        Playlist::create($formFields);
+
+        return redirect('/')
+                ->with('newPlaylist', 'Playlist Created.');
     }
+
+    // Show edit playlist form
+    public function edit(Playlist $playlist){
+        return view('playlists.edit', ['playlist' => $playlist]);
+    }
+
+    // Update playlist data
+    public function update(Request $request, Playlist $playlist){
+        $formFields = $request->validate([
+            'name' => ['required'],
+            'description' => 'required'
+        ]);
+        if($request->hasFile('image')){
+            $formFields['image'] = $request->file('image')->store('images', 'public');
+        }
+
+        $playlist->update($formFields);
+
+        return back()
+                ->with('newPlaylist', 'Playlist Updated Successfully.');
+    }
+
+    // Delete Playlist
+    public function destroy(Playlist $playlist){
+        $playlist->delete();
+
+        return redirect('/')->with('newPlaylist', 'Playlist Deleted Successfully.');
+    }
+
 }

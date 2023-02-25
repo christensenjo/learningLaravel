@@ -2,6 +2,10 @@ body {
     background-color: #edf6f9;
 }
 
+#container {
+    top: 50px;
+}
+
 a {
     text-decoration: none;
     color: #006d77;
@@ -33,7 +37,7 @@ a {
     margin-bottom: 20px;
 }
 
-.authLinks {
+.menuEnd {
     list-style-type: none;
     display: inline;
     float: right;
@@ -42,11 +46,16 @@ a {
     padding-top: 50px;
 }
 
-.authLinks li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-    padding-left: 10px;
+button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    background-color: #006d77;
+    color: white;
+}
+
+button a {
+    color: white;
 }
 
 .card {
@@ -56,15 +65,38 @@ a {
     background-color: #ffddd2;
 }
 
-.playlistView {
-    background-color: #edf6f9;
-}
-
 .playlistIcon {
     height: 80px;
     width: auto;
     float: left;
     padding-right: 10px;
+}
+
+.bigImage {
+    display: inline-block;
+    height: 300px;
+    width: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.songsList {
+    display: inline-block;
+    margin: 0;
+}
+
+.songsList li {
+    display: list-item;
+    width: fit-content;
+    margin-right: 0;
+}
+
+.showButton {
+    display: block;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 .shortDescription {
@@ -82,6 +114,7 @@ a {
 .createPlaylistForm label {
     display: block;
     margin: 10px;
+    margin-bottom: 0;
     padding: 6px;
     padding-left: 10px;
     font-size: 30px;
@@ -108,4 +141,56 @@ a {
     margin-left: 10px;
     margin-bottom: 30px;
     margin-top: 15px;
+}
+
+.errorText {
+    color: red;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.fixedFlashMsg {
+    background-color: #006d77;
+    color: white;
+    position: fixed;
+    height: 50px;
+    opacity: 50%;
+    top: 0;
+    width: 50%;
+    border-radius: 20px;
+    margin-left: 25%
+}
+
+.fixedFlashMsg p {
+    padding-left: 40%;
+    font-size: 16px;
+}
+
+.pagesLinks {
+    display: inline;
+    padding-top: 30px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.pagesLinks svg {
+    height: 25px;
+}
+
+.pagesLinks a {
+    font-size: 30px;
+}
+
+.pagesLinks span {
+    font-size: 30px;
+}
+
+.pagesLinks div {
+    display: inline;
+}
+
+.pagesLinks p {
+    display: inline;
+    font-size: 30px;
 }

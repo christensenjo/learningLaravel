@@ -32,9 +32,14 @@ Route::get('/playlists/add', [PlaylistController::class, 'create']);
 // Store playlist data
 Route::post('/playlists', [PlaylistController::class, 'store']);
 
+// Show Edit Form
+Route::get('/playlists/{playlist}/edit', [PlaylistController::class, 'edit']);
 
+// Update playlist data
+Route::put('/playlists/{playlist}', [PlaylistController::class, 'update']);
 
-
+// Delete playlist
+Route::delete('/playlists/{playlist}', [PlaylistController::class, 'destroy']);
 
 
 // Single Playlist Display
